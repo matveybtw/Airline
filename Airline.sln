@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline", "Airline\Airline.csproj", "{A6A64727-769A-45E5-9515-778D6E623DA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airline", "Airline\Airline.csproj", "{A6A64727-769A-45E5-9515-778D6E623DA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DatabAse\DataBase.csproj", "{EDFB6535-E246-4D5E-A1B1-4FD8EEF44CB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A6A64727-769A-45E5-9515-778D6E623DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6A64727-769A-45E5-9515-778D6E623DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6A64727-769A-45E5-9515-778D6E623DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFB6535-E246-4D5E-A1B1-4FD8EEF44CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFB6535-E246-4D5E-A1B1-4FD8EEF44CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFB6535-E246-4D5E-A1B1-4FD8EEF44CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFB6535-E246-4D5E-A1B1-4FD8EEF44CB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
