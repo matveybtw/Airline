@@ -20,5 +20,7 @@ namespace DataBase
         public string ClientFirstName { get; set; }
         [Required]
         public string ClientLastName { get; set; }
+        [Required]
+        public string ClientMail { get; set; }
     }
 }
