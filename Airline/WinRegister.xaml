@@ -1,0 +1,23 @@
+﻿<Window x:Class="Airline.WinRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Airline"
+        mc:Ignorable="d"
+     Title="WinRegister" Height="350" Width="450" ResizeMode="NoResize">
+    <Canvas Background="#FFB0C78F" >
+        <TextBlock Canvas.Left="160" Canvas.Top="10" FontSize="25" FontWeight="Bold">Реєстрація</TextBlock>
+
+
+        <TextBlock Canvas.Left="62" Canvas.Top="77" FontSize="18">Ім'я :</TextBlock>
+        <TextBlock Canvas.Left="48" Canvas.Top="124" FontSize="18">Логін :</TextBlock>
+        <TextBlock Canvas.Left="31" Canvas.Top="171" FontSize="18">Пароль :</TextBlock>
+
+        <TextBox Canvas.Left="126" Canvas.Top="77" FontSize="18" Width="219" Name="Name_txbx"></TextBox>
+        <TextBox Canvas.Left="126" Canvas.Top="123" FontSize="18" Width="218" Name="Log_txbx"></TextBox>
+        <TextBox Canvas.Left="125" Canvas.Top="170" FontSize="18" Width="219" Name="Pass_txbx"></TextBox>
+
+        <Button Canvas.Left="162" Canvas.Top="217" FontSize="18" Height="44" Width="147" Click ="Button_Click">Зареєструватися</Button>
+    </Canvas>
+</Window>

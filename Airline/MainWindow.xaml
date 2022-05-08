@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Airline"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Window.Background>
-        <ImageBrush ImageSource="images/mrij.jpg" Stretch ="Fill"></ImageBrush>
-    </Window.Background>
-    
-    <Grid>
-       
-    </Grid>
+   Title="MainWindow" Height="308" Width="580" ResizeMode ="NoResize">
+
+    <Canvas Background="#FFCBB7DE" >
+        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="58" Name="log_txbx"></TextBox>
+        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="107"  Name="pass_txbx"></TextBox>
+
+        <TextBlock FontSize="18" Canvas.Left="63" Canvas.Top="59">Логін :</TextBlock>
+        <TextBlock FontSize="18" Canvas.Left="46" Canvas.Top="108">Пароль :</TextBlock>
+
+        <Button Height="52" Width="150" Canvas.Left="224"  FontSize="24" Click="Button_Click"
+                Canvas.Top="156" FontWeight="Bold">Увійти</Button>
+
+        <Label Canvas.Left="241" Canvas.Top="213" FontSize="14" Foreground="Blue" Name="lab"
+               MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Label_MouseLeftButtonDown">Зареєструватися</Label>
+    </Canvas>
 </Window>

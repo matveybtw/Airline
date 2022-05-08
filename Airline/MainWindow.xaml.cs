@@ -20,9 +20,37 @@ namespace Airline
     /// </summary>
     public partial class MainWindow : Window
     {
+        WinRegister registerWin;
+        AirlineWin WinAir;
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void Label_MouseEnter(object sender, MouseEventArgs e)
+        {
+            lab.Foreground = Brushes.Red;
+        }
+
+        private void Label_MouseLeave(object sender, MouseEventArgs e)
+        {
+            lab.Foreground = Brushes.Blue;
+        }
+
+        private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            registerWin = new WinRegister();
+            registerWin.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+         
+
+            }
+
+
         }
     }
-}
+
