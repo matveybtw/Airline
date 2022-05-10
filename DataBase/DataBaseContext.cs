@@ -11,6 +11,7 @@ namespace DataBase
         }
         public virtual DbSet<Place> Places { get; set; }
         public virtual DbSet<Flight> Flights { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<BookedTicket> BookedTickets { get; set; }
     }
 }
