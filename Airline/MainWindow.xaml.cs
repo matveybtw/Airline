@@ -46,11 +46,20 @@ namespace Airline
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-         
+
+            var clien = ServiceUser.Get_User(email_txbx.Text, pass_txbx.Text);
+
+            if (clien != null)
+            {
+                WinAir = new AirlineWin();
+                WinAir.Show();
+                this.Close();
 
             }
-
-
         }
+
+
     }
+
+}
 
