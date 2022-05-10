@@ -8,15 +8,18 @@ using System.Text;
 
 namespace DataBase
 {
-    [Table("BookedTickets")]
-    public class BookedTicket
+    [Table("Clients")]
+    public class Client
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BookedTicketId { get; set; }
+        public int ClientId { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public Flight Flight { get; set; }
+        public string LastName { get; set; }
         [Required]
-        public Client Client { get; set; }
+        public string Password { get; set; }
+        [Required]
+        public string Mail { get; set; }
     }
 }
