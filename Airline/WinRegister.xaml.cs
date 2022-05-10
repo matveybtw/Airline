@@ -27,7 +27,7 @@ namespace Airline
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (ServiceUser.Add_User(Name_txbx.Text,LastName_txbx.Text, Email_txbx.Text, Pass_txbx.Text))
+            if (ServiceUser.Add_User(Name_txbx.Text, LastName_txbx.Text, Email_txbx.Text, Pass_txbx.Text))
                 this.Close();
         }
     }

@@ -8,12 +8,12 @@ using System.Windows;
 
 namespace Airline
 {
-  public  class ServiceUser
+    public class ServiceUser
     {
         static DataBaseContext context = new DataBaseContext();
 
         static bool ch = true;
-        public static bool Add_User(string name,string lastName, string email, string pass)
+        public static bool Add_User(string name, string lastName, string email, string pass)
         {
             ch = true;
 
