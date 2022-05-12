@@ -20,5 +20,9 @@ namespace DataBase
         public Place To { get; set; }
         [Required]
         public int MaxClients { get; set; }
+        [Required]
+        public double Cost { get; set; }
+        [Required]
+        public DateTime date { get; set; }
     }
 }
