@@ -19,21 +19,16 @@ namespace Airline
 
             foreach (var item in context.Clients)
             {
-                if (item.FirstName == name)
-                {
-                    ch = false;
-                    MessageBox.Show("Таке ім'я вже існує!");
-                    break;
-                }
+            
 
                 if (item.Mail == email)
                 {
-                    MessageBox.Show("Такий логін вже існує ");
+                    MessageBox.Show("Такий email вже існує ");
                     ch = false;
                     break;
                 }
 
-                if (name == "" || email == "" || pass == "" || name == " " || email == " " || pass == " " || name == "  " || email == "  " || pass == "  ") ////доробити
+                if (name == "" || email == "" || pass == "" || name == " " || email == " " || pass == " " || name == "  " || email == "  " || pass == "  " || lastName == "" || lastName == " " || lastName == "  " || lastName == "   ") ////доробити
                 {
                     MessageBox.Show("Пустий рядок не допустимий!");
                     ch = false;
@@ -70,7 +65,7 @@ namespace Airline
 
             }
 
-            MessageBox.Show("Невірний логін або пароль!");
+            MessageBox.Show("Невірний email або пароль!");
             return null;
         }
 

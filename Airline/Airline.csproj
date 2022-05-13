@@ -8,6 +8,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DatabAse\DataBase.csproj" />
-  </ItemGroup>
-
+	</ItemGroup>
 </Project>

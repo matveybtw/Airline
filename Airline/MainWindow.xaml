@@ -8,8 +8,8 @@
    Title="MainWindow" Height="308" Width="580" ResizeMode ="NoResize">
 
     <Canvas Background="#FFCBB7DE" >
-        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="58" Name="email_txbx"></TextBox>
-        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="107"  Name="pass_txbx"></TextBox>
+        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="58" Name="email_txbx">ruslan</TextBox>
+        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="107"  Name="pass_txbx">ruslan</TextBox>
 
         <TextBlock FontSize="18" Canvas.Left="63" Canvas.Top="59">Email :</TextBlock>
         <TextBlock FontSize="18" Canvas.Left="46" Canvas.Top="108">Пароль :</TextBlock>

@@ -51,7 +51,7 @@ namespace Airline
 
             if (clien != null)
             {
-                WinAir = new AirlineWin();
+                WinAir = new AirlineWin(clien);
                 WinAir.Show();
                 this.Close();
 
