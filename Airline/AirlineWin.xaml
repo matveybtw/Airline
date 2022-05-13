@@ -6,15 +6,21 @@
         xmlns:local="clr-namespace:Airline"
         mc:Ignorable="d"
         Title="AirlineWin" Height="450" Width="800">
-    <Canvas Background="Aqua">
-        <ComboBox Canvas.Left="96" Canvas.Top="76" Width="142" Name="from_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
-        <ComboBox Canvas.Left="96" Canvas.Top="127" Width="142" Name="To_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
-        <Button  Name ="Exit_btn" Click="Button_Click" Height="29" Width="57" Canvas.Left="719" Canvas.Top="10">Вихід</Button>
-        <Calendar  x:Name="calendar1"  Canvas.Left="266" Canvas.Top="75" SelectedDatesChanged="calendar1_SelectedDatesChanged"  ></Calendar>
-        <TextBlock Name="Data_txtblok"  FontSize="15" Canvas.Left="96" Canvas.Top="176" Background="White" Width="142">13.7.22</TextBlock>
-        <Button Canvas.Left="96"  IsEnabled="False" Canvas.Top="228" Height="40" Width="116" Name="Poshuk_btn">Знайти рейс</Button>
-        <TextBlock Canvas.Left="26" Canvas.Top="76" FontSize="15">Звідки:</TextBlock>
-        <TextBlock Canvas.Left="38" Canvas.Top="127" FontSize="15">Куди:</TextBlock>
-        <TextBlock Canvas.Left="38" Canvas.Top="176" FontSize="15">Дата:</TextBlock>
+    <Canvas Background="Olive">
+        <ComboBox Canvas.Left="104" Canvas.Top="117" Width="142" Name="from_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
+        <ComboBox Canvas.Left="104" Canvas.Top="168" Width="142" Name="To_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
+        <Button  Name ="Exit_btn" Click="Button_Click" Height="29" Width="45" Canvas.Left="726" Canvas.Top="10">Вихід</Button>
+        <Calendar  x:Name="calendar1"  Canvas.Left="274" Canvas.Top="116" SelectedDatesChanged="calendar1_SelectedDatesChanged"  ></Calendar>
+        <TextBlock Name="Data_txtblok"  FontSize="15" Canvas.Left="104" Canvas.Top="217" Background="White" Width="142">13.7.22</TextBlock>
+        <Button Canvas.Left="104"  IsEnabled="False" Canvas.Top="269" Height="40" Width="116" Click="Poshuk_btn_Click" Name="Poshuk_btn">Знайти рейс</Button>
+        <TextBlock Canvas.Left="34" Canvas.Top="117" FontSize="15">Звідки:</TextBlock>
+        <TextBlock Canvas.Left="46" Canvas.Top="168" FontSize="15">Куди:</TextBlock>
+        <TextBlock Canvas.Left="46" Canvas.Top="217" FontSize="15">Дата:</TextBlock>
+
+
+        <TextBlock Canvas.Right="110" Canvas.Top="13" FontSize="18" FontWeight="Bold" Name="User_txt"></TextBlock>
+
+
+
     </Canvas>
 </Window>

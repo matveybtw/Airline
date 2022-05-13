@@ -27,6 +27,8 @@ namespace Airline
         {
             InitializeComponent();
 
+            User_txt.Text = client.FirstName + " " + client.LastName;
+
             Data_txtblok.Text = $"{DateTime.Now.Day}.{DateTime.Now.Month}.{DateTime.Now.Year}";
 
 
@@ -72,6 +74,11 @@ namespace Airline
                 Poshuk_btn.IsEnabled = true;
             else
                 Poshuk_btn.IsEnabled = false;
+        }
+
+        private void Poshuk_btn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
