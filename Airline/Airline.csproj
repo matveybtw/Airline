@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="image\Sky2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DatabAse\DataBase.csproj" />
 	</ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\Sky2.jpg" />
+  </ItemGroup>
 </Project>
