@@ -30,5 +30,11 @@ namespace Airline
             if (ServiceUser.Add_User(Name_txbx.Text, LastName_txbx.Text, Email_txbx.Text, Pass_txbx.Text))
                 this.Close();
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+         
+            this.Close();
+        }
     }
 }
