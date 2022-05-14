@@ -8,12 +8,14 @@ using System.Text;
 
 namespace DataBase
 {
-    [Table("BookedTickets")]
-    public class BookedTicket : BaseEntity<int>
+    public interface IEntity<T>
     {
-        [Required]
-        public Flight Flight { get; set; }
-        [Required]
-        public Client Client { get; set; }
+        T Id { get; set; }
+    }
+    public class BaseEntity<T> : IEntity<T>
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public T Id { get; set; }
     }
 }

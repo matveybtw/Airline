@@ -9,11 +9,8 @@ using System.Text;
 namespace DataBase
 {
     [Table("Clients")]
-    public class Client
+    public class Client : BaseEntity<int>
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ClientId { get; set; }
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }

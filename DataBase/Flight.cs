@@ -9,11 +9,8 @@ using System.Text;
 namespace DataBase
 {
     [Table("Flights")]
-    public class Flight
+    public class Flight : BaseEntity<int>
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int FlightId { get; set; }
         [Required]
         public Place From { get; set; }
         [Required]
