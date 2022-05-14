@@ -5,21 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Airline"
         mc:Ignorable="d"
-     Title="WinRegister" Height="350" Width="450" ResizeMode="NoResize">
-    <Canvas Background="#FFB0C78F" >
-        <TextBlock Canvas.Left="185" Canvas.Top="10" FontSize="25" FontWeight="Bold">Реєстрація</TextBlock>
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     Title="WinRegister" Height="550" Width="950" ResizeMode="NoResize">
+
+    <Window.Background  >
+        <ImageBrush ImageSource="image/Sky2.jpg" Stretch ="Fill"></ImageBrush>
+    </Window.Background>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" Width="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <Grid Margin="0 0 0 20">
+                    <TextBlock HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" >Реєстрація</TextBlock>
+                    <Button HorizontalAlignment="Right" Content="Вхід" x:Name="Exit" Click="Exit_Click" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                </Grid>
+                <TextBlock Canvas.Left="67" FontWeight="Bold" Canvas.Top="78" FontSize="18">Ім'я :</TextBlock>
+                <TextBox Name="Name_txbx" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <TextBlock Canvas.Left="18" FontWeight="Bold" Canvas.Top="122" FontSize="18">Прізвище :</TextBlock>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="LastName_txbx"></TextBox>
+                <TextBlock FontWeight="Bold" Canvas.Left="53" Canvas.Top="168" FontSize="18">Email :</TextBlock>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="Email_txbx"></TextBox>
+                <TextBlock  FontWeight="Bold" Canvas.Left="36" Canvas.Top="215" FontSize="18">Пароль :</TextBlock>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Name="Pass_txbx"></TextBox>
+                
+                
+                <Button Content="Зареєструватися" Margin="0 20"  Click ="Button_Click"></Button>
+            </StackPanel>
+        </Border>
 
 
-        <TextBlock Canvas.Left="67" Canvas.Top="78" FontSize="18">Ім'я :</TextBlock>
-        <TextBlock Canvas.Left="18" Canvas.Top="122" FontSize="18">Прізвище :</TextBlock>
-        <TextBlock Canvas.Left="53" Canvas.Top="168" FontSize="18">Email :</TextBlock>
-        <TextBlock Canvas.Left="36" Canvas.Top="215" FontSize="18">Пароль :</TextBlock>
-
-        <TextBox Canvas.Left="140" Canvas.Top="77" FontSize="18" Width="219" Name="Name_txbx"></TextBox>
-        <TextBox Canvas.Left="140" Canvas.Top="121" FontSize="18" Width="219" Name="LastName_txbx"></TextBox>
-        <TextBox Canvas.Left="141" Canvas.Top="167" FontSize="18" Width="218" Name="Email_txbx"></TextBox>
-        <TextBox Canvas.Left="140" Canvas.Top="214" FontSize="18" Width="219" Name="Pass_txbx"></TextBox>
-
-        <Button Canvas.Left="176" Canvas.Top="258" FontSize="18" Height="44" Width="147" Click ="Button_Click">Зареєструватися</Button>
-    </Canvas>
+    </Grid>
+    
 </Window>
