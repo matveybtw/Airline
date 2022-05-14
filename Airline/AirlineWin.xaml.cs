@@ -23,9 +23,11 @@ namespace Airline
     {
         bool check_btn1 = false;
         bool check_btn2 = true;
+   
         public AirlineWin(Client client)
         {
             InitializeComponent();
+      
 
             User_txt.Text = client.FirstName + " " + client.LastName;
 
@@ -78,6 +80,11 @@ namespace Airline
 
         private void Poshuk_btn_Click(object sender, RoutedEventArgs e)
         {
+            foreach(var item in ServiceFlight.GetFlight(calendar1.SelectedDate.Value, from_combo.Text, To_combo.Text))
+            {
+                Listbox.Items.Add(item);
+            }
+
 
         }
     }
