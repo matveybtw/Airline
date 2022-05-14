@@ -13,10 +13,6 @@ namespace DataBase
         {
             dbctx = new DataBaseContext();
         }
-        ~BaseRepository()
-        {
-            dbctx.Dispose();
-        }
         public bool Add(TEntity entity)
         {
             try
