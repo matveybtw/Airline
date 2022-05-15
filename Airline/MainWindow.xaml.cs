@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using DataBase;
 namespace Airline
 {
     /// <summary>
@@ -25,7 +25,11 @@ namespace Airline
         public MainWindow()
         {
             InitializeComponent();
-
+            //Generator.GenerateClients(100);
+            //Generator.GeneratePlaces(100);
+            //Generator.GenerateFlights(100);
+            //Generator.GenerateBookedTickets(100);
+            
         }
 
         private void Label_MouseEnter(object sender, MouseEventArgs e)
