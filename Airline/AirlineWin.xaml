@@ -5,22 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Airline"
         mc:Ignorable="d"
-        Title="AirlineWin" Height="450" Width="820" ResizeMode="NoResize">
-    <Canvas Background="Olive">
-        <ComboBox Canvas.Left="104" Canvas.Top="117" Width="142" Name="from_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
-        <ComboBox Canvas.Left="104" Canvas.Top="168" Width="142" Name="To_combo" SelectionChanged="from_combo_SelectionChanged_1"></ComboBox>
-        <Button  Name ="Exit_btn" Click="Button_Click" Height="29" Width="76" Canvas.Left="695" Canvas.Top="10">Вихід</Button>
-        <Calendar  x:Name="calendar1"  Canvas.Left="282" Canvas.Top="47" SelectedDatesChanged="calendar1_SelectedDatesChanged"  ></Calendar>
-        <TextBlock Name="Data_txtblok"  FontSize="15" Canvas.Left="104" Canvas.Top="217" Background="White" Width="142">13.7.22</TextBlock>
-        <Button Canvas.Left="104"  IsEnabled="False" Canvas.Top="269" Height="40" Width="116" Click="Poshuk_btn_Click" Name="Poshuk_btn">Знайти рейс</Button>
-        <TextBlock Canvas.Left="34" Canvas.Top="117" FontSize="15">Звідки:</TextBlock>
-        <TextBlock Canvas.Left="46" Canvas.Top="168" FontSize="15">Куди:</TextBlock>
-        <TextBlock Canvas.Left="46" Canvas.Top="217" FontSize="15">Дата:</TextBlock>
+          Title="AirlineWin" Height="550" Width="950">
+
+    <Window.Background>
+        <ImageBrush ImageSource="image/Sky2.jpg" Stretch ="Fill"></ImageBrush>
+    </Window.Background>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" Width="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <Grid Margin="0 0 0 20">
+                    <TextBlock HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" >Fly UA</TextBlock>
+                    <Button HorizontalAlignment="Right" Content="Вихід" Name ="Exit_btn" Click="Button_Click" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                </Grid>
+
+                <TextBlock Canvas.Left="34" Canvas.Top="117" FontSize="15" FontWeight="Bold">Звідки:</TextBlock>
+                <ComboBox  Name="from_combo" SelectionChanged="from_combo_SelectionChanged_1" Style="{StaticResource MaterialDesignComboBox}"></ComboBox>
+                <TextBlock Canvas.Left="46" Canvas.Top="168"  FontWeight="Bold" FontSize="15">Куди:</TextBlock>
+                <ComboBox  Name="To_combo" SelectionChanged="from_combo_SelectionChanged_1" Style="{StaticResource MaterialDesignComboBox}"></ComboBox>
+                <TextBlock Canvas.Left="46" Canvas.Top="217"  FontWeight="Bold" FontSize="15">Дата:</TextBlock>
+                <TextBlock Name="Data_txtblok"  FontSize="15" Canvas.Left="104"  FontWeight="Bold" Canvas.Top="217" Background="White" Width="142">13.7.22</TextBlock>
 
 
-        <TextBlock Canvas.Right="110" Canvas.Top="13" FontSize="18" FontWeight="Bold" Name="User_txt"></TextBlock>
 
-        <ListBox Height="295" Width="254" Canvas.Left="494" Canvas.Top="74" Name="Listbox"></ListBox>
+                <Button  Margin="0 20"  Click="Poshuk_btn_Click" Name="Poshuk_btn">Знайти рейс</Button>
+            </StackPanel>
+        </Border>
 
-    </Canvas>
+        <Calendar Width="250" Height="350" Margin="15"   x:Name="calendar1"  Canvas.Left="274" Canvas.Top="116" SelectedDatesChanged="calendar1_SelectedDatesChanged"  ></Calendar>
+
+    </Grid>
+
+
 </Window>
