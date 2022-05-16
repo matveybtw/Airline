@@ -5,19 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Airline"
         mc:Ignorable="d"
-   Title="MainWindow" Height="308" Width="580" ResizeMode ="NoResize">
+   Title="MainWindow" Height="550" Width="950" ResizeMode ="NoResize">
 
-    <Canvas Background="#FFCBB7DE" >
-        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="58" Name="email_txbx"></TextBox>
-        <TextBox FontSize="18" Width="320" Canvas.Left="139" Canvas.Top="107"  Name="pass_txbx"></TextBox>
+    <Window.Background>
+        <ImageBrush  ImageSource="image/Sky2.jpg" Stretch ="Fill"></ImageBrush>
+    </Window.Background>
 
-        <TextBlock FontSize="18" Canvas.Left="63" Canvas.Top="59">Email :</TextBlock>
-        <TextBlock FontSize="18" Canvas.Left="46" Canvas.Top="108">Пароль :</TextBlock>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" Width="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <Grid Margin="0 0 0 20">
+                    <TextBlock HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" >Вхід</TextBlock>
 
-        <Button Height="52" Width="150" Canvas.Left="224"  FontSize="24" Click="Button_Click"
-                Canvas.Top="156" FontWeight="Bold">Увійти</Button>
-
-        <Label Canvas.Left="241" Canvas.Top="213" FontSize="14" Foreground="Blue" Name="lab"
+                    <Label HorizontalAlignment="Right"   FontSize="14" Name="lab" Margin="10" Style="{StaticResource MaterialDesignLabel}"
                MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Label_MouseLeftButtonDown">Зареєструватися</Label>
-    </Canvas>
+                </Grid>
+                <TextBlock FontWeight="Bold" FontSize="18" Canvas.Left="63" Canvas.Top="59">Email :</TextBlock>
+                <TextBox   Name="email_txbx" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <TextBlock FontWeight="Bold" FontSize="18" Canvas.Left="46" Canvas.Top="108">Пароль :</TextBlock>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   Name="pass_txbx"></TextBox>
+
+
+
+                <Button Content="Увійти" Margin="0 20"  Click="Button_Click"></Button>
+            </StackPanel>
+        </Border>
+
+
+    </Grid>
+
+   
 </Window>
