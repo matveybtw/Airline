@@ -11,6 +11,11 @@ namespace DataBase
     [Table("BookedTickets")]
     public class BookedTicket : BaseEntity<int>
     {
+        [ForeignKey("Flight")]
+        public int FlightId { get; set; }
+        [ForeignKey("Client")]
+        public int ClientId { get; set; }
+
         [Required]
         public Flight Flight { get; set; }
         [Required]

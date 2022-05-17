@@ -29,7 +29,7 @@ namespace Airline
             InitializeComponent();
       
 
-            User_txt.Text = client.FirstName + " " + client.LastName;
+            //User_txt.Text = client.FirstName + " " + client.LastName;
 
             Data_txtblok.Text = $"{DateTime.Now.Day}.{DateTime.Now.Month}.{DateTime.Now.Year}";
 
@@ -82,7 +82,7 @@ namespace Airline
         {
             foreach(var item in ServiceFlight.GetFlight(calendar1.SelectedDate.Value, from_combo.Text, To_combo.Text))
             {
-                Listbox.Items.Add(item);
+                //Listbox.Items.Add(item);
             }
 
 

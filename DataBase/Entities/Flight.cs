@@ -11,6 +11,10 @@ namespace DataBase
     [Table("Flights")]
     public class Flight : BaseEntity<int>
     {
+        [ForeignKey("From")]
+        public int FromId { get; set; }
+        [ForeignKey("To")]
+        public int ToId { get; set; }
         [Required]
         public Place From { get; set; }
         [Required]
@@ -18,7 +22,7 @@ namespace DataBase
         [Required]
         public int MaxClients { get; set; }
         [Required]
-        public double Cost { get; set; }
+        public decimal Cost { get; set; }
         [Required]
         public DateTime date { get; set; }
     }

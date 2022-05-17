@@ -28,7 +28,23 @@ namespace Airline
             //Generator.GenerateClients(100);
             //Generator.GeneratePlaces(100);
             //Generator.GenerateFlights(100);
-            //Generator.GenerateBookedTickets(100);
+            Generator.GenerateBookedTickets(100);
+            //var unit = new UnitOfWork();
+            //if (!unit.FlightRepository.Add(new Flight()
+            //{
+            //    Cost = 200,
+            //    date = DateTime.Today,
+            //    FromId= unit.PlaceRepository.GetAll().First().Id,
+            //    ToId= unit.PlaceRepository.GetAll().First().Id,
+            //    MaxClients = 200
+            //}))
+            //{
+            //    MessageBox.Show("false");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("true");
+            //}
             
         }
 
